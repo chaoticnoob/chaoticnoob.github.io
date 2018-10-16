@@ -150,5 +150,7 @@ function Click(){
 	if (w>h) {	
 	if (((h/2)-20<mY&&mY<(h/2)+20)&&((w/3)-100<mX&&mX<(w/3)+100))	{		
 
-    window.location.replace("https://chaoticnoob.github.io/about.html");
-}}}
+    window.location.href="https://chaoticnoob.github.io/about.html";
+}else if (((h/2)-50<mY&&mY<(h/2)+50)&&((2*w/3)-50<mX&&mX<(2*w/3)+50)) {
+    window.location.href="https://chaoticnoob.github.io/explore.html";
+} else {}}}
