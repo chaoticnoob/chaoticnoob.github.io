@@ -90,7 +90,7 @@ function TextHorizontalL(){
   	textSize(w/20);
   	textAlign(CENTER);
   
-  		T1=text('CHAOTIC NOOB', w/3,h/2);	
+  		T1=text('ABOUT', w/3,h/2);	
 }
 
 function TextVerticalL(){
@@ -102,7 +102,7 @@ function TextVerticalL(){
   	textSize(h/10);
   	textAlign(CENTER);
   		
-  		T1=text('CHAOTIC NOOB', w/2,h/3);  	
+  		T1=text('ABOUT', w/2,h/3);  	
 }
 
 function TextHorizontalR(){
@@ -114,7 +114,7 @@ function TextHorizontalR(){
   	textSize(w/20);
   	textAlign(CENTER);
   		
-  		T2=text('PROJECTS', 2*w/3,h/2);
+  		T2=text('EXPLORE', 2*w/3,h/2);
 }
 
 function TextVerticalR(){
@@ -126,5 +126,5 @@ function TextVerticalR(){
   	textSize(h/10);
   	textAlign(CENTER);
   		
-  		T2=text('PROJECTS', w/2,2*h/3);
+  		T2=text('EXPLORE', w/2,2*h/3);
 }
