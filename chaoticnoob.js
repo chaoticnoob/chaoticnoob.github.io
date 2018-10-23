@@ -8,8 +8,8 @@ FontBlack = loadFont('TitilliumWeb-Black.ttf');
 }
 
 function setup() {
-c=createCanvas(windowWidth, windowHeight);
-c.mousePressed(Click);
+createCanvas(windowWidth, windowHeight);
+
 	frameRate(10);
 }
 
@@ -146,7 +146,7 @@ function TextVerticalR(){
 }
 }
 
-function Click(){
+function mousePressed(){
 	if (w>h) {	
 	if (((h/2)-100<mY&&mY<(h/2)+100)&&((w/3)-200<mX&&mX<(w/3)+200))	{		
     window.location.href="https://chaoticnoob.github.io/about.html";
