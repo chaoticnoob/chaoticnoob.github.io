@@ -24,12 +24,12 @@ background(cB);
 	
 if (w>h) 
 {	
-if (((h/2)-20<mY&&mY<(h/2)+20)&&((w/3)-100<mX&&mX<(w/3)+100))
+if (((h/2)-50<mY&&mY<(h/2))&&((w/3)-200<mX&&mX<(w/3)+200))
 {		
 
 		TextHorizontalL()
 } 
-else if (((h/2)-50<mY&&mY<(h/2)+50)&&((2*w/3)-50<mX&&mX<(2*w/3)+50)) 
+else if (((h/2)-50<mY&&mY<(h/2))&&((2*w/3)-100<mX&&mX<(2*w/3)+100)) 
 {
 		TextHorizontalR()
 }
@@ -39,11 +39,11 @@ else
 }
 } else 
 {
-if (((h/3)<mY&&mY<(h/3)+150)&&((w/2)-50<mX&&mX<(w/2)+50))
+if (((h/3)-50<mY&&mY<(h/3))&&((w/2)-100<mX&&mX<(w/2)+100))
 {
 		TextVerticalL()
 } 
-else if (((2*h/3)-50<mY&&mY<(2*h/3)+50)&&((w/2)-50<mX&&mX<(w/2)+50)) 
+else if (((2*h/3)-50<mY&&mY<(2*h/3))&&((w/2)-100<mX&&mX<(w/2)+100)) 
 {
 		TextVerticalR()
 }
@@ -148,9 +148,9 @@ function TextVerticalR(){
 
 function Click(){
 	if (w>h) {	
-	if (((h/2)-20<mY&&mY<(h/2)+20)&&((w/3)-100<mX&&mX<(w/3)+100))	{		
+	if (((h/2)-100<mY&&mY<(h/2)+100)&&((w/3)-200<mX&&mX<(w/3)+200))	{		
     window.location.href="https://chaoticnoob.github.io/about.html";
-}else if (((h/2)-50<mY&&mY<(h/2)+50)&&((2*w/3)-50<mX&&mX<(2*w/3)+50)) {
+}else if (((h/2)-50<mY&&mY<(h/2)+50)&&((2*w/3)-100<mX&&mX<(2*w/3)+100)) {
     window.location.href="https://chaoticnoob.github.io/explore.html";
 } 
 }else  {	
