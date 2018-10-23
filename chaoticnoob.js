@@ -4,7 +4,7 @@ var T1=0, T2=0; //Elements
 var FontBlack;	//Font
 
 function preload() {
-FontBlack = loadFont('TitilliumWeb-Black.ttf');
+FontBlack = loadFont('assets/TitilliumWeb-Black.ttf');
 }
 
 function setup() {
