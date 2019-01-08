@@ -4,7 +4,6 @@ var t1, t2; //tables
 var p=[], q=[], d1=[], d2=[], d3=[], d4=[], d5=[]; //arrays
 
 function preload() {
-  t1 = loadTable('data/resources.csv', 'csv', 'header');  
   t2 = loadJSON("data/data.json");
 }
 
@@ -158,10 +157,11 @@ for (i = 0; i <= t2.resources.length; i++)
 
 function mousePressed(){
 if(((w/3-w/50)<mouseX&&mouseX<(w/3+w/50))&&((9*h/10-w/75)<mouseY&&mouseY<(9*h/10+w/75)))
-  {    window.location.href="https://chaoticnoob.github.io/index.html";   }
+  {    window.location.href="https://chaoticnoob.github.io/index.html"; 
+  j=-1;  }
 else if(((2*w/3-w/60)<mouseX&&mouseX<(2*w/3+w/60))&&((9*h/10-w/75)<mouseY&&mouseY<(9*h/10+w/75)))
-  {window.location.href="https://chaoticnoob.github.io/explore.html";}
-
+  {    window.location.href="https://chaoticnoob.github.io/explore.html";
+  j=-1;  }
 if (j != -1) { window.open(d2[j]); }
 }
 
