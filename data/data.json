@@ -1,0 +1,23 @@
+{
+	"resources":[
+						{
+							"hh":"Httpster",
+							"url":"https://httpster.net/",
+							"des":"Httpster showcases totally rocking websites made by people from all over the world",
+							"tags":"Curated Web Design"
+						},
+						{
+							"hh":"Design Observer",
+							"url":"https://designobserver.com/",
+							"des":"Design Observer is a blog by AIGA",
+							"tags":"Design Blog"
+						},
+						{
+							"hh":"Ani Dalal",
+							"url":"https://ani67.github.io/",
+							"des":"Design Portfolio 2018 ",
+							"tags":"Portfolio Website"
+						}
+
+				]
+}

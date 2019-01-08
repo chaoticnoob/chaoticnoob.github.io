@@ -1,134 +1,171 @@
-var w=0, h=0, mX=0, mY=0, pX=0, pY=0, r=10, c=0; //Dimensions
+var w=0, h=0, mX=0, mY=0, b=0, i=0, j=-1; //Dimensions
 var cW=255, cB=0; //Colors
+var t1, t2; //tables
+var p=[], q=[], d1=[], d2=[], d3=[], d4=[], d5=[]; //arrays
 
-
-
+function preload() {
+  t1 = loadTable('data/resources.csv', 'csv', 'header');  
+  t2 = loadJSON("data/data.json");
+}
 
 function setup() {
+
 createCanvas(windowWidth, windowHeight);
-background(cB);
+background(cW,cB,cB);
+
+for (i = 0; i < t2.resources.length; i++) 
+{
+    d1[i]=t2.resources[i].hh;
+    d2[i]=t2.resources[i].url;
+    d3[i]=t2.resources[i].des;    
+    d4[i]=t2.resources[i].tags;
+
+
+p[i]=random(50,windowWidth-50);
+q[i]=random(50,windowHeight-50);   
+}
+
 }
 
 function draw() {
-  w=width, h=height;
-  mX=mouseX, mY=mouseY, pX=pmouseX, pY=pmouseY; 
-  if(pX===mX&&pY===mY&&r>0)
-    r=r-1;
-  else
-    r=r+1;
-  
-if (c===0) 
-{ 
-  fill(random(255),random(255),random(255));
-  ellipseMode(CENTER);
-  ellipse(mX, mY, r, r);
-}
-if(c<2)
-{
+
+w=width, h=height; 
+    
+dots();
+
+textAlign(CENTER);
+textStyle(BOLD);
+textSize(12);
+if(((w/3-w/50)<mouseX&&mouseX<(w/3+w/50))&&((9*h/10-w/75)<mouseY&&mouseY<(9*h/10+w/75)))
+  {fill(cW);}
+else
+  {fill(cB);}
+text('Chaotic Noob', w/3, 9*h/10);
+if(((2*w/3-w/60)<mouseX&&mouseX<(2*w/3+w/60))&&((9*h/10-w/75)<mouseY&&mouseY<(9*h/10+w/75)))
+  {fill(cW);}
+else
+  {fill(cB);}
+text('Explore', 2*w/3, 9*h/10);
+
+
 
 }
+
+function dots(){
+
+
+background(cW,cB,cB);
+noStroke();
+  
+for (i = 0; i <= t2.resources.length; i++) 
+{
+
+  fill(cB);
+
+  if(mouseX>p[i])
+  {
+    if(mouseY>q[i])
+    {
+      if((mouseX-p[i])<w/75&&(mouseY-q[i])<w/75)
+        { 
+          fill(cB);
+          textAlign(LEFT);
+          textStyle(BOLD);
+          textSize(20);
+          text(d1[i], h/10, h/10);
+          textStyle(NORMAL);
+          textSize(10);
+          fill(cW);
+          text(d4[i], (h/10)-10, ((h/10)+20));
+          textSize(12);
+          fill(cB);
+          text(d3[i], h/10, ((h/10)+40));
+          j=i;
+          }
+    }
+    else{
+
+      if((mouseX-p[i])<w/75&&(q[i]-mouseY)<w/75)
+        { 
+          fill(cB);
+          textAlign(LEFT);
+          textStyle(BOLD);
+          textSize(20);
+          text(d1[i], h/10, h/10);
+          textStyle(NORMAL);
+          textSize(10);
+          fill(cW);
+          text(d4[i], (h/10)-10, ((h/10)+20));
+          textSize(12);
+          fill(cB);
+          text(d3[i], h/10, ((h/10)+40));
+          j=i;
+        }
+    }
+  }
+  else
+  {
+    if(mouseY>q[i])
+    {
+      if((p[i]-mouseX)<w/75&&(mouseY-q[i])<w/75)
+        { 
+          fill(cB);
+          textAlign(LEFT);
+          textStyle(BOLD);
+          textSize(20);
+          text(d1[i], h/10, h/10);
+          textStyle(NORMAL);
+          textSize(10);
+          fill(cW);
+          text(d4[i], (h/10)-10, ((h/10)+20));
+          textSize(12);
+          fill(cB);
+          text(d3[i], h/10, ((h/10)+40));
+          j=i;
+          }
+    }
+    else{
+
+      if((p[i]-mouseX)<w/75&&(q[i]-mouseY)<w/75)
+        { 
+          fill(cB);
+          textAlign(LEFT);
+          textStyle(BOLD);
+          textSize(20);
+          text(d1[i], h/10, h/10);
+          textStyle(NORMAL);
+          textSize(10);
+          fill(cW);
+          text(d4[i], (h/10)-10, ((h/10)+20));
+          textSize(12);
+          fill(cB);
+          text(d3[i], h/10, ((h/10)+40));
+          j=i;
+          }
+    }
+  }
+    ellipse(p[i],q[i],w/75,w/75);
+}
+
+
+
+}
+
+
+
+
+
+
+function mousePressed(){
+if(((w/3-w/50)<mouseX&&mouseX<(w/3+w/50))&&((9*h/10-w/75)<mouseY&&mouseY<(9*h/10+w/75)))
+  {    window.location.href="https://chaoticnoob.github.io/index.html";   }
+else if(((2*w/3-w/60)<mouseX&&mouseX<(2*w/3+w/60))&&((9*h/10-w/75)<mouseY&&mouseY<(9*h/10+w/75)))
+  {window.location.href="https://chaoticnoob.github.io/explore.html";}
+
+if (j != -1) { window.open(d2[j]); }
 }
 
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-}
-
-// function ChaoticNoob(){
-
-//  noStroke();
-//  fill(cB);
-//    textFont(FontBlack);
-//    textSize(w/30);
-//    textAlign(LEFT,TOP);
-      
-//      text('CHAOTIC NOOB', h, h/6,w-(h/6),h/6+(w/30));
-
-//     textFont(FontHand);
-//     textSize(w/100);
-
-//      text(t1, h, h/6+(w/20),w-(h/6),h/2);
-// }
-
-// function Home(){
-
-// noStroke();
-// background(cB);
-//   fill(cW,cB,cB);
-//     textFont(FontBlack);
-//     textSize(w/20);
-//     textAlign(LEFT,TOP);
-      
-//       text('Home', h, h/6,w-(h/6),h/6+(w/30));
-
-// }
-
-// function TextHorizontalL(){
-  
-//  background(cW);
-//  noStroke();
-//  fill(cW,cB,cB);
-//    textFont(FontBlack);
-//    textSize(w/20);
-//    textAlign(CENTER);
-  
-//      T1=text('ABOUT', w/3,h/2);  
-
-//    function mousePressed(){
-//     window.open("http://www.google.com", _self);
-// }
-// }
-
-// function TextVerticalL(){
-
-//  background(cW);
-//  noStroke();
-//  fill(cW,cB,cB);
-//    textFont(FontBlack);
-//    textSize(h/10);
-//    textAlign(CENTER);
-      
-//      T1=text('ABOUT', w/2,h/3); 
-
-//    function mousePressed(){
-//     window.open("http://www.google.com", _self);
-// }  
-// }
-
-// function TextHorizontalR(){
-
-//  background(cW,cB,cB);
-//  noStroke();
-//  fill(cB);
-//    textFont(FontBlack);
-//    textSize(w/20);
-//    textAlign(CENTER);
-      
-//      T2=text('EXPLORE', 2*w/3,h/2);
-
-//    function mousePressed(){
-//     window.open("http://www.google.com", _self);
-// }
-// }
-
-// function TextVerticalR(){
-
-//  background(cW,cB,cB);
-//  noStroke();
-//  fill(cB);
-//    textFont(FontBlack);
-//    textSize(h/10);
-//    textAlign(CENTER);
-      
-//      T2=text('EXPLORE', w/2,2*h/3);
-//    function mousePressed(){
-//     window.open("http://www.google.com", _self);
-// }
-// }
-
-function mousePressed(){
-
-  c=c+1;
-  background(cB);
-
 }
