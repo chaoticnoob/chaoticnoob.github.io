@@ -79,6 +79,7 @@ for (i = 0; i <= t2.resources.length; i++)
           textSize(12);
           fill(cB);
           text(d3[i], h/10, ((h/10)+40));
+          fill(cW);
           j=i;
           }
     }
@@ -98,6 +99,7 @@ for (i = 0; i <= t2.resources.length; i++)
           textSize(12);
           fill(cB);
           text(d3[i], h/10, ((h/10)+40));
+          fill(cW);
           j=i;
         }
     }
@@ -120,6 +122,7 @@ for (i = 0; i <= t2.resources.length; i++)
           textSize(12);
           fill(cB);
           text(d3[i], h/10, ((h/10)+40));
+          fill(cW);
           j=i;
           }
     }
@@ -139,6 +142,7 @@ for (i = 0; i <= t2.resources.length; i++)
           textSize(12);
           fill(cB);
           text(d3[i], h/10, ((h/10)+40));
+          fill(cW);
           j=i;
           }
     }
