@@ -3,20 +3,68 @@
 						{
 							"hh":"Httpster",
 							"url":"https://httpster.net/",
-							"des":"Httpster showcases totally rocking websites made by people from all over the world",
-							"tags":"Curated Web Design"
+							"des":"showcases totally rocking websites",
+							"tags":"Web Design Directory"
 						},
 						{
 							"hh":"Design Observer",
 							"url":"https://designobserver.com/",
-							"des":"Design Observer is a blog by AIGA",
+							"des":"is a blog by AIGA",
 							"tags":"Design Blog"
 						},
 						{
 							"hh":"Ani Dalal",
 							"url":"https://ani67.github.io/",
-							"des":"Design Portfolio 2018 ",
+							"des":"projects Documentation 2018 ",
 							"tags":"Portfolio Website"
+						},
+						{
+							"hh":"OneStar Press",
+							"url":"http://onestarpress.com/",
+							"des":"publishes books by artists ",
+							"tags":"Visual/Print Design "
+						},
+						{
+							"hh":"Processing",
+							"url":"https://p5js.org/",
+							"des":"that's how this website came to be",
+							"tags":"Javascript Library"
+						},
+						{
+							"hh":"We Feel Fine",
+							"url":"http://wefeelfine.org/",
+							"des":"an exploration of human emotion, in six movements",
+							"tags":"Datavisualisation"
+						},
+						{
+							"hh":"SelfieCity",
+							"url":"http://selfiecity.net/",
+							"des":"investigating the style of selfies in five cities across the world",
+							"tags":"Datavisualisation"
+						},
+						{
+							"hh":"nettime",
+							"url":"https://nettime.org/",
+							"des":"mailing lists for networked cultures, politics, and tactics",
+							"tags":"Directory"
+						},
+						{
+							"hh":"The Whale Hunt",
+							"url":"http://thewhalehunt.org/",
+							"des":"a storytelling experiment",
+							"tags":"Interaction Design"
+						},
+						{
+							"hh":"Network Effect",
+							"url":"http://networkeffect.io/",
+							"des":"explores the psychological effect of Internet use on humanity",
+							"tags":"Data Art"
+						},
+						{
+							"hh":"Ryoji Ikeda",
+							"url":"http://www.ryojiikeda.com/",
+							"des":"Japanese Sound Artist",
+							"tags":"Installations"
 						}
 
 				]
