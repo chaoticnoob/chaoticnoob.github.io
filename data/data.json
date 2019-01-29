@@ -66,10 +66,11 @@
 							"des":"Japanese Sound Artist",
 							"tags":"Installations"
 						},	
-                                                {"hh":"Chronus Art Center ",
-						 "url":"www.chronusartcenter.org",
-						 "des":"Nonprofit chinese media art organisation",
-						 "tags":"Media / PostHuman realities"
+                                                {
+							"hh":"Chronus Art Center ",
+						        "url":"http://chronusartcenter.org",
+						        "des":"Nonprofit chinese media art organisation",
+						        "tags":"Media / PostHuman realities"
 						}
 				]
 }
